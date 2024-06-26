@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula: Conceitos Básicos de Programação em Python</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Aula: Conceitos Básicos de Programação em Python</h1>
+    </header>
+    <div class="container">
+        <section>
+            <h2>1. Tipos Primitivos</h2>
+            <p>Tipos primitivos são os tipos de dados básicos fornecidos por uma linguagem de programação. Em Python, os principais tipos primitivos são:</p>
+            <ul>
+                <li>Inteiro (<code>int</code>): Números inteiros, sem parte decimal.</li>
+                <li>Float (<code>float</code>): Números reais, com parte decimal.</li>
+                <li>Booleano (<code>bool</code>): Valores lógicos, podendo ser <code>True</code> ou <code>False</code>.</li>
+                <li>String (<code>str</code>): Sequência de caracteres.</li>
+            </ul>
+            <pre><code>
+# Inteiro
+numero_inteiro = 10
+print(f"Tipo de numero_inteiro: {type(numero_inteiro)}")  # Saída: <class 'int'>
+
+# Float
+numero_float = 10.5
+print(f"Tipo de numero_float: {type(numero_float)}")  # Saída: <class 'float'>
+
+# Booleano
+booleano = True
+print(f"Tipo de booleano: {type(booleano)}")  # Saída: <class 'bool'>
+
+# String
+texto = "Olá, mundo!"
+print(f"Tipo de texto: {type(texto)}")  # Saída: <class 'str'>
+            </code></pre>
+        </section>
+
+        <section>
+            <h2>2. Vetores (Listas)</h2>
+            <p>Vetores são sequências ordenadas de elementos que podem ser acessados por um índice. Em Python, usamos listas para representar vetores.</p>
+            <pre><code>
+# Definindo um vetor (lista)
+vetor = [1, 2, 3, 4, 5]
+
+# Acessando elementos do vetor
+print(vetor[0])  # Saída: 1
+print(vetor[2])  # Saída: 3
+
+# Modificando um elemento do vetor
+vetor[1] = 10
+print(vetor)  # Saída: [1, 10, 3, 4, 5]
+            </code></pre>
+        </section>
+
+        <section>
+            <h2>3. Matrizes</h2>
+            <p>Matrizes são arrays bidimensionais. Em Python, podemos representar matrizes usando listas aninhadas.</p>
+            <pre><code>
+# Definindo uma matriz (lista de listas)
+matriz = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+# Acessando elementos da matriz
+print(matriz[0][0])  # Saída: 1
+print(matriz[1][2])  # Saída: 6
+
+# Modificando um elemento da matriz
+matriz[2][1] = 10
+print(matriz)  # Saída: [[1, 2, 3], [4, 5, 6], [7, 10, 9]]
+            </code></pre>
+        </section>
+
+        <section>
+            <h2>4. Manipulação de Strings</h2>
+            <p>Strings são sequências de caracteres. Python oferece várias operações para manipulação de strings.</p>
+            <pre><code>
+# Definindo uma string
+texto = "Olá, mundo!"
+
+# Acessando caracteres
+print(texto[0])  # Saída: O
+print(texto[5])  # Saída: ,
+
+# Fatiando strings
+print(texto[0:5])  # Saída: Olá, 
+
+# Concatenando strings
+nova_texto = texto + " Como vai você?"
+print(nova_texto)  # Saída: Olá, mundo! Como vai você?
+
+# Substituindo partes da string
+texto_modificado = texto.replace("mundo", "Python")
+print(texto_modificado)  # Saída: Olá, Python!
+            </code></pre>
+        </section>
+
+        <section>
+            <h2>5. Algoritmos com Desvio Condicional Simples e Aninhadas</h2>
+            <h3>Desvio Condicional Simples:</h3>
+            <pre><code>
+# Exemplo de desvio condicional simples
+idade = 18
+if idade >= 18:
+    print("Você é maior de idade.")
+else:
+    print("Você é menor de idade.")
+            </code></pre>
+
+            <h3>Desvio Condicional Aninhado:</h3>
+            <pre><code>
+# Exemplo de desvio condicional aninhado
+nota = 85
+
+if nota >= 90:
+    print("A")
+elif nota >= 80:
+    print("B")
+elif nota >= 70:
+    print("C")
+elif nota >= 60:
+    print("D")
+else:
+    print("F")
+            </code></pre>
+        </section>
+
+        <section>
+            <h2>6. Estruturas de Repetição Simples e Aninhadas</h2>
+            <h3>Estrutura de Repetição Simples:</h3>
+            <pre><code>
+# Exemplo de laço for
+for i in range(5):
+    print(i)  # Saída: 0, 1, 2, 3, 4
+
+# Exemplo de laço while
+contador = 0
+while contador < 5:
+    print(contador)  # Saída: 0, 1, 2, 3, 4
+    contador += 1
+            </code></pre>
+
+            <h3>Estrutura de Repetição Aninhada:</h3>
+            <pre><code>
+# Exemplo de laços aninhados
+for i in range(3):
+    for j in range(3):
+        print(f"i: {i}, j: {j}")
+            </code></pre>
+        </section>
+    </div>
+</body>
+</html>
