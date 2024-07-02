@@ -82,31 +82,7 @@ print(matriz)  # Saída: [[1, 2, 3], [4, 5, 6], [7, 10, 9]]
         </section>
 
         <section>
-            <h2>4. Manipulação de Strings</h2>
-            <p>Strings são sequências de caracteres. Python oferece várias operações para manipulação de strings.</p>
-            <pre><code>
-# Definindo uma string
-texto = "Olá, mundo!"
-
-# Acessando caracteres
-print(texto[0])  # Saída: O
-print(texto[5])  # Saída: ,
-
-# Fatiando strings
-print(texto[0:5])  # Saída: Olá, 
-
-# Concatenando strings
-nova_texto = texto + " Como vai você?"
-print(nova_texto)  # Saída: Olá, mundo! Como vai você?
-
-# Substituindo partes da string
-texto_modificado = texto.replace("mundo", "Python")
-print(texto_modificado)  # Saída: Olá, Python!
-            </code></pre>
-        </section>
-
-        <section>
-            <h2>5. Algoritmos com Desvio Condicional Simples e Aninhadas</h2>
+            <h2>4. Algoritmos com Desvio Condicional Simples e Aninhadas</h2>
             <h3>Desvio Condicional Simples:</h3>
             <pre><code>
 # Exemplo de desvio condicional simples
@@ -136,7 +112,7 @@ else:
         </section>
 
         <section>
-            <h2>6. Estruturas de Repetição Simples e Aninhadas</h2>
+            <h2>5. Estruturas de Repetição Simples e Aninhadas</h2>
             <h3>Estrutura de Repetição Simples:</h3>
             <pre><code>
 # Exemplo de laço for
@@ -156,6 +132,61 @@ while contador < 5:
 for i in range(3):
     for j in range(3):
         print(f"i: {i}, j: {j}")
+            </code></pre>
+        </section>
+
+        <section>
+            <h2>6. Manipulação de Strings</h2>
+            <p>Strings são sequências de caracteres. Python oferece várias operações para manipulação de strings.</p>
+            <pre><code>
+# Definindo uma string
+texto = "Olá, mundo!"
+
+# Acessando caracteres
+print(texto[0])  # Saída: O
+print(texto[5])  # Saída: ,
+
+# Fatiando strings
+print(texto[0:5])  # Saída: Olá, 
+
+# Concatenando strings
+nova_texto = texto + " Como vai você?"
+print(nova_texto)  # Saída: Olá, mundo! Como vai você?
+
+# Substituindo partes da string
+texto_modificado = texto.replace("mundo", "Python")
+print(texto_modificado)  # Saída: Olá, Python!
+            </code></pre>
+        </section>
+
+        <section>
+            <h2>7. Manipulação de Arquivos</h2>
+            <p>Python permite ler e escrever arquivos de texto usando as funções <code>open</code>, <code>read</code>, <code>write</code> e <code>close</code>.</p>
+            <pre><code>
+# Abrindo um arquivo para leitura
+arquivo = open('exemplo.txt', 'r')
+conteudo = arquivo.read()
+print(conteudo)
+arquivo.close()
+
+# Abrindo um arquivo para escrita
+arquivo = open('exemplo.txt', 'w')
+arquivo.write('Escrevendo no arquivo.')
+arquivo.close()
+
+# Abrindo um arquivo para leitura e escrita
+arquivo = open('exemplo.txt', 'r+')
+conteudo = arquivo.read()
+arquivo.write(' Adicionando mais texto.')
+arquivo.close()
+
+# Usando with para manipular arquivos (não necessita chamar close())
+with open('exemplo.txt', 'r') as arquivo:
+    conteudo = arquivo.read()
+    print(conteudo)
+
+with open('exemplo.txt', 'w') as arquivo:
+    arquivo.write('Novo conteúdo.')
             </code></pre>
         </section>
     </div>
