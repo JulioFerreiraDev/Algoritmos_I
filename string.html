@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conteúdo sobre Strings em Python</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        header {
+            background: #50b3a2;
+            color: #fff;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+        header a {
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 16px;
+        }
+        header ul {
+            padding: 0;
+            list-style: none;
+        }
+        header li {
+            display: inline;
+            padding: 0 20px 0 20px;
+        }
+        header #branding {
+            float: left;
+        }
+        header #branding h1 {
+            margin: 0;
+        }
+        header nav {
+            float: right;
+            margin-top: 10px;
+        }
+        .content {
+            padding: 20px;
+            background: #fff;
+            margin-top: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .content h2 {
+            color: #50b3a2;
+        }
+        .content pre {
+            background: #333;
+            color: #fff;
+            padding: 10px;
+            overflow: auto;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="branding">
+                <h1>Strings em Python</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Início</a></li>
+                    <li><a href="#">Exemplos</a></li>
+                    <li><a href="#">Exercícios</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <h2>Introdução</h2>
+            <p>Quando precisamos trabalhar com dados textuais temos que utilizar variáveis do tipo string. A string é codificada no computador por meio da tabela ASCII.</p>
+            <pre>
+print("Olá Mundo")
+s = 'variável do tipo str'
+            </pre>
+
+            <h2>String</h2>
+            <p>O comando <code>str()</code> transforma qualquer variável de tipo primitivo ou constante em uma string de igual conteúdo.</p>
+            <pre>
+sint = str(123)
+sfloat = str(1.54)
+x = 3.14
+print("O valor de PI é: " + str(x))
+            </pre>
+            <p>Concatenação: O comando <code>+</code> concatena (junta) duas strings.</p>
+            <pre>
+s1 = "Olá"
+s2 = " Mundo"
+s = s1 + s2
+            </pre>
+            <p>Comprimento: a função <code>len(s)</code> retorna o comprimento da string <code>s</code>.</p>
+
+            <h2>Acessar Caracteres</h2>
+            <p>Para acessar os caracteres de uma string é necessário utilizar colchetes.</p>
+            <pre>
+s = 'variável do tipo str'
+print(s[0])  # Imprime 'v'
+c = s[2]  # 'c' recebe 'r'
+            </pre>
+
+            <h2>Slicing (cortar) Strings</h2>
+            <p>Slicing é uma particularidade da linguagem Python.</p>
+            <pre>
+s = "algoritmos"
+x = s[1:3]  # x conterá 'lg'
+y = s[3:]  # y conterá 'oritmos'
+z = s[:3]  # z conterá 'alg'
+            </pre>
+
+            <h2>Percorrer uma String</h2>
+            <pre>
+for x in "estruturas":
+    print(x)
+
+s = "estruturas"
+for x in s:
+    print(x)
+            </pre>
+
+            <h2>Atividade - Slicing</h2>
+            <h3>Exemplos</h3>
+            <pre>
+s = "Os alunos foram aprovados em ALG I"
+nova_string = s[:23]
+print(nova_string)  # "Os alunos foram aprovados"
+            </pre>
+
+            <h3>Exercícios</h3>
+            <h4>a)</h4>
+            <pre>
+s = "Os alunos foram aprovados em ALG I"
+nova_string = s[:23]
+print(nova_string)  # "Os alunos foram aprovados"
+            </pre>
+            <h4>b)</h4>
+            <pre>
+s = "Licenciatura em Computação é um curso bom"
+nova_string = s[14:]
+print(nova_string)  # "Computação é um curso bom"
+            </pre>
+            <h4>c)</h4>
+            <pre>
+s = "Todos os alunos matriculados concluíram o curso."
+nova_string = s[:13] + s[26:]
+print(nova_string)  # "Todos os alunos concluíram o curso."
+            </pre>
+
+            <h3>Sem utilizar slicing:</h3>
+            <h4>a)</h4>
+            <pre>
+s = "Os alunos foram aprovados em ALG I"
+nova_string = ""
+for i in range(23):
+    nova_string += s[i]
+print(nova_string)  # "Os alunos foram aprovados"
+            </pre>
+            <h4>b)</h4>
+            <pre>
+s = "Licenciatura em Computação é um curso bom"
+nova_string = ""
+for i in range(14, len(s)):
+    nova_string += s[i]
+print(nova_string)  # "Computação é um curso bom"
+            </pre>
+            <h4>c)</h4>
+            <pre>
+s = "Todos os alunos matriculados concluíram o curso."
+nova_string = ""
+for i in range(13):
+    nova_string += s[i]
+for i in range(26, len(s)):
+    nova_string += s[i]
+print(nova_string)  # "Todos os alunos concluíram o curso."
+            </pre>
+
+            <h2>Comando <code>in</code></h2>
+            <pre>
+txt = "Software Livre"
+print("Livre" in txt)  # imprime True
+            </pre>
+
+            <h2>Funções</h2>
+            <pre>
+s = " Hello World "
+print(s.upper())  # " HELLO WORLD "
+print(s.lower())  # " hello world "
+print(s.strip())  # "Hello World"
+print(s.replace("World", "Python"))  # " Hello Python "
+print(s.split())  # ['Hello', 'World']
+            </pre>
+
+            <h2>Exercícios</h2>
+            <h3>1) Implemente o código dos exemplos:</h3>
+            <pre>
+print("Olá Mundo")
+s = 'variável do tipo str'
+sint = str(123)
+sfloat = str(1.54)
+x = 3.14
+print("O valor de PI é: " + str(x))
+            </pre>
+
+            <h3>2) Programa para imprimir dígitos por extenso:</h3>
+            <pre>
+num = "98,748"
+digits = {'0': 'zero', '1': 'um', '2': 'dois', '3': 'três', '4': 'quatro', '5': 'cinco', '6': 'seis', '7': 'sete', '8': 'oito', '9': 'nove', ',': 'vírgula'}
+result = ", ".join(digits[d] for d in num)
+print(result)  # "nove, oito, vírgula, sete, quatro, oito"
+            </pre>
+
+            <h3>3) Programa para verificar palíndromo:</h3>
+            <pre>
+s = "radar"
+str_inv = s[::-1]
+print(f"{s} é um PALÍNDROMO" if s == str_inv else f"{s} não é um PALÍNDROMO")
+            </pre>
+
+            <h3>4) Programa para ler nome e pontuação dos participantes:</h3>
+            <pre>
+participantes = [("João", 10), ("Maria", 15), ("Ana", 8)]
+vencedor = max(participantes, key=lambda p: p[1])
+print(f"O vencedor é {vencedor[0]} com {vencedor[1]} pontos")
+            </pre>
+        </div>
+    </div
